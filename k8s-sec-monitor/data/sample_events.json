@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "a06b9958-690f-4002-95d0-27ddfbca6b8b",
+    "timestamp": "2025-11-01T06:22:17.368596+00:00",
+    "cluster": "prod-west-2",
+    "node": "node-7",
+    "namespace": "security",
+    "pod": "feature-store-5637-secu",
+    "container": "golang",
+    "event": "crypto-mining process detected",
+    "severity": 10,
+    "category": "runtime",
+    "policy": "crypto-mining",
+    "signals": [
+      "ebpf.proc.exec",
+      "cpu.burst"
+    ],
+    "user": "sre-bot",
+    "source_ip": "10.1.2.11",
+    "dest_ip": "10.1.1.15",
+    "details": {
+      "process": "/usr/local/bin/miner",
+      "hash": "ab553284b1e34028a6614ab35300cb54",
+      "syscall_count": "3804"
+    }
+  },
+  {
+    "id": "084144e4-3023-4a27-9a9d-0924045f8084",
+    "timestamp": "2025-11-01T06:22:17.368701+00:00",
+    "cluster": "dev-apac-2",
+    "node": "node-6",
+    "namespace": "security",
+    "pod": "payments-2001-secu",
+    "container": "python-app",
+    "event": "network beaconing pattern",
+    "severity": 5,
+    "category": "network",
+    "policy": "egress-anomaly",
+    "signals": [
+      "net.conn.freq",
+      "dns.suspicious"
+    ],
+    "user": "sre-bot",
+    "source_ip": "10.1.4.11",
+    "dest_ip": "10.1.4.19",
+    "details": {
+      "process": "/usr/bin/python",
+      "hash": "59b8674a4d054d92987d8db882609edb",
+      "syscall_count": "4189"
+    }
+  },
+  {
+    "id": "b8d1ec33-a730-4ec6-b09c-03cb61d17402",
+    "timestamp": "2025-11-01T06:22:17.368745+00:00",
+    "cluster": "dev-apac-2",
+    "node": "node-2",
+    "namespace": "payments",
+    "pod": "api-gateway-1265-paym",
+    "container": "sidecar-security",
+    "event": "suspicious syscall anomaly",
+    "severity": 6,
+    "category": "syscall",
+    "policy": "syscall-baseline",
+    "signals": [
+      "ebpf.sys.open",
+      "ebpf.sys.execve"
+    ],
+    "user": "alice",
+    "source_ip": "10.1.2.12",
+    "dest_ip": "10.1.4.19",
+    "details": {
+      "process": "/usr/bin/python",
+      "hash": "693db90da88744b7aa7e2818ba97e976",
+      "syscall_count": "1404"
+    }
+  },
+  {
+    "id": "216d2911-8220-4fee-a29e-626b119b139b",
+    "timestamp": "2025-11-01T06:22:17.368772+00:00",
+    "cluster": "prod-west-2",
+    "node": "node-7",
+    "namespace": "kube-system",
+    "pod": "feature-store-9132-kube",
+    "container": "sidecar-security",
+    "event": "kube-audit: privilege escalation attempt",
+    "severity": 9,
+    "category": "kube-audit",
+    "policy": "rbac-guard",
+    "signals": [
+      "audit.bindClusterRole",
+      "audit.createServiceAccount"
+    ],
+    "user": "alice",
+    "source_ip": "10.1.1.10",
+    "dest_ip": "10.1.1.13",
+    "details": {
+      "process": "/usr/local/bin/miner",
+      "hash": "ada7308ca7674831b243fb5a22c22f24",
+      "syscall_count": "2162"
+    }
+  },
+  {
+    "id": "325ae53a-5788-4f5e-a528-c31f377187f3",
+    "timestamp": "2025-11-01T06:22:17.368798+00:00",
+    "cluster": "staging-eu-1",
+    "node": "node-6",
+    "namespace": "kube-system",
+    "pod": "payments-4413-kube",
+    "container": "golang",
+    "event": "suspicious syscall anomaly",
+    "severity": 6,
+    "category": "syscall",
+    "policy": "syscall-baseline",
+    "signals": [
+      "ebpf.sys.open",
+      "ebpf.sys.execve"
+    ],
+    "user": "sre-bot",
+    "source_ip": "10.1.4.13",
+    "dest_ip": "10.1.2.12",
+    "details": {
+      "process": "/bin/bash",
+      "hash": "376695e6e5494ecda0206aa7ca2a68cb",
+      "syscall_count": "527"
+    }
+  },
+  {
+    "id": "afcb89f0-8c78-422e-8208-3331cffca9e4",
+    "timestamp": "2025-11-01T06:22:17.368821+00:00",
+    "cluster": "prod-east-1",
+    "node": "node-5",
+    "namespace": "security",
+    "pod": "feature-store-3910-secu",
+    "container": "golang",
+    "event": "network beaconing pattern",
+    "severity": 6,
+    "category": "network",
+    "policy": "egress-anomaly",
+    "signals": [
+      "net.conn.freq",
+      "dns.suspicious"
+    ],
+    "user": "system:serviceaccount:security:agent",
+    "source_ip": "10.1.4.14",
+    "dest_ip": "10.1.4.13",
+    "details": {
+      "process": "/usr/local/bin/miner",
+      "hash": "ac97696c92f14dc88136fa59ebfb63fc",
+      "syscall_count": "1768"
+    }
+  },
+  {
+    "id": "57928917-a77a-45da-999d-3c04694e2cea",
+    "timestamp": "2025-11-01T06:22:17.368843+00:00",
+    "cluster": "prod-east-1",
+    "node": "node-8",
+    "namespace": "default",
+    "pod": "feature-store-6588-defa",
+    "container": "golang",
+    "event": "crypto-mining process detected",
+    "severity": 10,
+    "category": "runtime",
+    "policy": "crypto-mining",
+    "signals": [
+      "ebpf.proc.exec",
+      "cpu.burst"
+    ],
+    "user": "sre-bot",
+    "source_ip": "10.1.1.14",
+    "dest_ip": "10.1.3.12",
+    "details": {
+      "process": "/usr/bin/python",
+      "hash": "d12fc78352424ca68ba9a5f24e623d11",
+      "syscall_count": "3363"
+    }
+  },
+  {
+    "id": "34de9642-c969-4e38-9eb4-81db8c39d99f",
+    "timestamp": "2025-11-01T06:22:17.368873+00:00",
+    "cluster": "dev-apac-2",
+    "node": "node-5",
+    "namespace": "kube-system",
+    "pod": "payments-1294-kube",
+    "container": "sidecar-security",
+    "event": "network beaconing pattern",
+    "severity": 5,
+    "category": "network",
+    "policy": "egress-anomaly",
+    "signals": [
+      "net.conn.freq",
+      "dns.suspicious"
+    ],
+    "user": "system:serviceaccount:security:agent",
+    "source_ip": "10.1.1.12",
+    "dest_ip": "10.1.4.11",
+    "details": {
+      "process": "/usr/bin/kubectl",
+      "hash": "c6c28d212b344fd0bec07f524b0e7272",
+      "syscall_count": "1036"
+    }
+  },
+  {
+    "id": "6058d4cc-4b0e-4d7d-964f-f2a9ff96f164",
+    "timestamp": "2025-11-01T06:22:17.368899+00:00",
+    "cluster": "dev-apac-2",
+    "node": "node-1",
+    "namespace": "kube-system",
+    "pod": "recommender-3898-kube",
+    "container": "sidecar-security",
+    "event": "kube-audit: privilege escalation attempt",
+    "severity": 10,
+    "category": "kube-audit",
+    "policy": "rbac-guard",
+    "signals": [
+      "audit.bindClusterRole",
+      "audit.createServiceAccount"
+    ],
+    "user": "system:serviceaccount:security:agent",
+    "source_ip": "10.1.2.11",
+    "dest_ip": "10.1.2.10",
+    "details": {
+      "process": "/usr/bin/python",
+      "hash": "f55b9d44601a4c31b12f6a1f64433449",
+      "syscall_count": "3286"
+    }
+  },
+  {
+    "id": "a81bdca2-a605-4e41-b8a7-838d86585906",
+    "timestamp": "2025-11-01T06:22:17.368921+00:00",
+    "cluster": "staging-eu-1",
+    "node": "node-1",
+    "namespace": "kube-system",
+    "pod": "feature-store-9246-kube",
+    "container": "golang",
+    "event": "crypto-mining process detected",
+    "severity": 10,
+    "category": "runtime",
+    "policy": "crypto-mining",
+    "signals": [
+      "ebpf.proc.exec",
+      "cpu.burst"
+    ],
+    "user": "ml-app",
+    "source_ip": "10.1.3.15",
+    "dest_ip": "10.1.2.16",
+    "details": {
+      "process": "/bin/bash",
+      "hash": "16369da6fb8c450abe96a2cf7b5bc67d",
+      "syscall_count": "669"
+    }
+  },
+  {
+    "id": "378c9ffd-c990-4390-9260-b3612b7846fc",
+    "timestamp": "2025-11-01T06:22:17.368941+00:00",
+    "cluster": "prod-east-1",
+    "node": "node-3",
+    "namespace": "kube-system",
+    "pod": "api-gateway-7895-kube",
+    "container": "golang",
+    "event": "network beaconing pattern",
+    "severity": 7,
+    "category": "network",
+    "policy": "egress-anomaly",
+    "signals": [
+      "net.conn.freq",
+      "dns.suspicious"
+    ],
+    "user": "bob",
+    "source_ip": "10.1.2.18",
+    "dest_ip": "10.1.2.10",
+    "details": {
+      "process": "/usr/bin/kubectl",
+      "hash": "a653951fc8104b54857ceea08310d9f8",
+      "syscall_count": "389"
+    }
+  },
+  {
+    "id": "4d6abb56-7989-471e-b776-5ae420e9bb52",
+    "timestamp": "2025-11-01T06:22:17.368962+00:00",
+    "cluster": "staging-eu-1",
+    "node": "node-2",
+    "namespace": "security",
+    "pod": "feature-store-5302-secu",
+    "container": "inference",
+    "event": "suspicious syscall anomaly",
+    "severity": 6,
+    "category": "syscall",
+    "policy": "syscall-baseline",
+    "signals": [
+      "ebpf.sys.open",
+      "ebpf.sys.execve"
+    ],
+    "user": "sre-bot",
+    "source_ip": "10.1.1.16",
+    "dest_ip": "10.1.2.19",
+    "details": {
+      "process": "/usr/bin/python",
+      "hash": "4dfabb15d8e84c78b3856d7caa3c265c",
+      "syscall_count": "1281"
+    }
+  },
+  {
+    "id": "8364bd22-4cc7-40ce-8efe-9b25dc53a7d8",
+    "timestamp": "2025-11-01T06:22:17.368982+00:00",
+    "cluster": "prod-west-2",
+    "node": "node-5",
+    "namespace": "security",
+    "pod": "api-gateway-5145-secu",
+    "container": "python-app",
+    "event": "crypto-mining process detected",
+    "severity": 9,
+    "category": "runtime",
+    "policy": "crypto-mining",
+    "signals": [
+      "ebpf.proc.exec",
+      "cpu.burst"
+    ],
+    "user": "sre-bot",
+    "source_ip": "10.1.1.13",
+    "dest_ip": "10.1.3.10",
+    "details": {
+      "process": "/usr/bin/kubectl",
+      "hash": "2539037e7af64656af7d956e67d1dc4a",
+      "syscall_count": "4781"
+    }
+  },
+  {
+    "id": "ca6e09bd-0358-48db-a5b5-183dba61798c",
+    "timestamp": "2025-11-01T06:22:17.369001+00:00",
+    "cluster": "prod-west-2",
+    "node": "node-2",
+    "namespace": "kube-system",
+    "pod": "threat-detector-0701-kube",
+    "container": "inference",
+    "event": "kube-audit: privilege escalation attempt",
+    "severity": 10,
+    "category": "kube-audit",
+    "policy": "rbac-guard",
+    "signals": [
+      "audit.bindClusterRole",
+      "audit.createServiceAccount"
+    ],
+    "user": "alice",
+    "source_ip": "10.1.4.11",
+    "dest_ip": "10.1.4.16",
+    "details": {
+      "process": "/usr/local/bin/miner",
+      "hash": "c50daeb750be42d3aac636dadd17720e",
+      "syscall_count": "3321"
+    }
+  },
+  {
+    "id": "1c1a448b-e616-49cb-a2b1-7bbd57a3aae2",
+    "timestamp": "2025-11-01T06:22:17.369021+00:00",
+    "cluster": "prod-west-2",
+    "node": "node-5",
+    "namespace": "kube-system",
+    "pod": "recommender-1822-kube",
+    "container": "inference",
+    "event": "network beaconing pattern",
+    "severity": 6,
+    "category": "network",
+    "policy": "egress-anomaly",
+    "signals": [
+      "net.conn.freq",
+      "dns.suspicious"
+    ],
+    "user": "system:serviceaccount:security:agent",
+    "source_ip": "10.1.2.19",
+    "dest_ip": "10.1.1.13",
+    "details": {
+      "process": "/usr/bin/python",
+      "hash": "ffb19e8eceae46fab89a227d0d7aedf8",
+      "syscall_count": "1398"
+    }
+  },
+  {
+    "id": "ef7928a1-6607-48c2-a7aa-c1a44f9a9a7f",
+    "timestamp": "2025-11-01T06:22:17.369081+00:00",
+    "cluster": "dev-apac-2",
+    "node": "node-4",
+    "namespace": "kube-system",
+    "pod": "feature-store-5644-kube",
+    "container": "nodejs",
+    "event": "kube-audit: privilege escalation attempt",
+    "severity": 8,
+    "category": "kube-audit",
+    "policy": "rbac-guard",
+    "signals": [
+      "audit.bindClusterRole",
+      "audit.createServiceAccount"
+    ],
+    "user": "system:serviceaccount:security:agent",
+    "source_ip": "10.1.3.12",
+    "dest_ip": "10.1.4.15",
+    "details": {
+      "process": "/usr/bin/python",
+      "hash": "b67a934b00524d24b4ed0eb3dca0c714",
+      "syscall_count": "2810"
+    }
+  },
+  {
+    "id": "e0384d7d-64d7-4322-a17c-c8b37f89523f",
+    "timestamp": "2025-11-01T06:22:17.369105+00:00",
+    "cluster": "prod-west-2",
+    "node": "node-6",
+    "namespace": "default",
+    "pod": "payments-4871-defa",
+    "container": "nodejs",
+    "event": "file integrity violation",
+    "severity": 5,
+    "category": "file-integrity",
+    "policy": "fimap",
+    "signals": [
+      "fs.watch.modify",
+      "hash.mismatch"
+    ],
+    "user": "bob",
+    "source_ip": "10.1.1.18",
+    "dest_ip": "10.1.2.19",
+    "details": {
+      "process": "/usr/bin/kubectl",
+      "hash": "c4db1b36af07465cbf79d607103fe814",
+      "syscall_count": "3103"
+    }
+  },
+  {
+    "id": "ed5cbb8c-9bce-4cb0-8b26-f477f8ddb9c8",
+    "timestamp": "2025-11-01T06:22:17.369125+00:00",
+    "cluster": "prod-east-1",
+    "node": "node-7",
+    "namespace": "payments",
+    "pod": "api-gateway-0324-paym",
+    "container": "sidecar-security",
+    "event": "kube-audit: privilege escalation attempt",
+    "severity": 9,
+    "category": "kube-audit",
+    "policy": "rbac-guard",
+    "signals": [
+      "audit.bindClusterRole",
+      "audit.createServiceAccount"
+    ],
+    "user": "alice",
+    "source_ip": "10.1.4.15",
+    "dest_ip": "10.1.4.12",
+    "details": {
+      "process": "/usr/bin/python",
+      "hash": "986ade829ae74d14b3ce50117c03ac0e",
+      "syscall_count": "2976"
+    }
+  },
+  {
+    "id": "8cf82bb3-5059-41c1-9cfc-e55f43c37115",
+    "timestamp": "2025-11-01T06:22:17.369146+00:00",
+    "cluster": "staging-eu-1",
+    "node": "node-4",
+    "namespace": "security",
+    "pod": "threat-detector-3776-secu",
+    "container": "golang",
+    "event": "crypto-mining process detected",
+    "severity": 7,
+    "category": "runtime",
+    "policy": "crypto-mining",
+    "signals": [
+      "ebpf.proc.exec",
+      "cpu.burst"
+    ],
+    "user": "sre-bot",
+    "source_ip": "10.1.2.15",
+    "dest_ip": "10.1.4.13",
+    "details": {
+      "process": "/usr/bin/python",
+      "hash": "175ebd721a774e4b8d282b6f53c913e3",
+      "syscall_count": "2542"
+    }
+  },
+  {
+    "id": "86109201-1027-44a9-9bdd-e6a846bb6c5b",
+    "timestamp": "2025-11-01T06:22:17.369166+00:00",
+    "cluster": "staging-eu-1",
+    "node": "node-3",
+    "namespace": "security",
+    "pod": "recommender-2647-secu",
+    "container": "sidecar-security",
+    "event": "suspicious syscall anomaly",
+    "severity": 9,
+    "category": "syscall",
+    "policy": "syscall-baseline",
+    "signals": [
+      "ebpf.sys.open",
+      "ebpf.sys.execve"
+    ],
+    "user": "sre-bot",
+    "source_ip": "10.1.3.13",
+    "dest_ip": "10.1.4.16",
+    "details": {
+      "process": "/usr/bin/python",
+      "hash": "2b3146e27af64f10a4a706310d9ff898",
+      "syscall_count": "4431"
+    }
+  },
+  {
+    "id": "3e5b0622-6c4e-4ee4-a1ce-9cce803eba93",
+    "timestamp": "2025-11-01T06:22:17.369186+00:00",
+    "cluster": "prod-west-2",
+    "node": "node-2",
+    "namespace": "ml-infra",
+    "pod": "threat-detector-3638-mlin",
+    "container": "golang",
+    "event": "kube-audit: privilege escalation attempt",
+    "severity": 10,
+    "category": "kube-audit",
+    "policy": "rbac-guard",
+    "signals": [
+      "audit.bindClusterRole",
+      "audit.createServiceAccount"
+    ],
+    "user": "alice",
+    "source_ip": "10.1.3.17",
+    "dest_ip": "10.1.1.11",
+    "details": {
+      "process": "/usr/local/bin/miner",
+      "hash": "7a6d24e598884f68be556437d68e7f43",
+      "syscall_count": "4447"
+    }
+  },
+  {
+    "id": "0cbd0cb8-1187-4475-a8d7-fd9e4c42c0b0",
+    "timestamp": "2025-11-01T06:22:17.369207+00:00",
+    "cluster": "staging-eu-1",
+    "node": "node-7",
+    "namespace": "security",
+    "pod": "feature-store-6217-secu",
+    "container": "sidecar-security",
+    "event": "network beaconing pattern",
+    "severity": 6,
+    "category": "network",
+    "policy": "egress-anomaly",
+    "signals": [
+      "net.conn.freq",
+      "dns.suspicious"
+    ],
+    "user": "bob",
+    "source_ip": "10.1.2.14",
+    "dest_ip": "10.1.1.16",
+    "details": {
+      "process": "/usr/bin/python",
+      "hash": "2d64dd18a3c54ef8bab3d1af9bf407c1",
+      "syscall_count": "3284"
+    }
+  },
+  {
+    "id": "8a013eb1-9173-458c-975e-2462ed321e51",
+    "timestamp": "2025-11-01T06:22:17.369227+00:00",
+    "cluster": "prod-east-1",
+    "node": "node-5",
+    "namespace": "security",
+    "pod": "recommender-4917-secu",
+    "container": "golang",
+    "event": "crypto-mining process detected",
+    "severity": 10,
+    "category": "runtime",
+    "policy": "crypto-mining",
+    "signals": [
+      "ebpf.proc.exec",
+      "cpu.burst"
+    ],
+    "user": "sre-bot",
+    "source_ip": "10.1.3.11",
+    "dest_ip": "10.1.1.19",
+    "details": {
+      "process": "/bin/bash",
+      "hash": "a43d171b8208453190ecd802273dfaa5",
+      "syscall_count": "3237"
+    }
+  },
+  {
+    "id": "095aed7e-7d83-430e-854f-edafaf3e3ff7",
+    "timestamp": "2025-11-01T06:22:17.369248+00:00",
+    "cluster": "prod-west-2",
+    "node": "node-3",
+    "namespace": "security",
+    "pod": "recommender-3602-secu",
+    "container": "sidecar-security",
+    "event": "suspicious syscall anomaly",
+    "severity": 7,
+    "category": "syscall",
+    "policy": "syscall-baseline",
+    "signals": [
+      "ebpf.sys.open",
+      "ebpf.sys.execve"
+    ],
+    "user": "system:serviceaccount:security:agent",
+    "source_ip": "10.1.2.18",
+    "dest_ip": "10.1.2.15",
+    "details": {
+      "process": "/bin/bash",
+      "hash": "eae9a9a8de5b4d65ba82999b93acc4b2",
+      "syscall_count": "195"
+    }
+  },
+  {
+    "id": "78e2a119-bbc9-49f8-ae5c-e061093434d7",
+    "timestamp": "2025-11-01T06:22:17.369267+00:00",
+    "cluster": "prod-west-2",
+    "node": "node-1",
+    "namespace": "ml-infra",
+    "pod": "payments-9991-mlin",
+    "container": "inference",
+    "event": "network beaconing pattern",
+    "severity": 7,
+    "category": "network",
+    "policy": "egress-anomaly",
+    "signals": [
+      "net.conn.freq",
+      "dns.suspicious"
+    ],
+    "user": "alice",
+    "source_ip": "10.1.2.19",
+    "dest_ip": "10.1.3.10",
+    "details": {
+      "process": "/bin/bash",
+      "hash": "646e5951cf09496b895d60600fe9652c",
+      "syscall_count": "1780"
+    }
+  },
+  {
+    "id": "99b649eb-cdfa-4191-8e60-87ae1c92c58f",
+    "timestamp": "2025-11-01T06:22:17.369287+00:00",
+    "cluster": "prod-east-1",
+    "node": "node-5",
+    "namespace": "kube-system",
+    "pod": "feature-store-5478-kube",
+    "container": "inference",
+    "event": "file integrity violation",
+    "severity": 7,
+    "category": "file-integrity",
+    "policy": "fimap",
+    "signals": [
+      "fs.watch.modify",
+      "hash.mismatch"
+    ],
+    "user": "bob",
+    "source_ip": "10.1.2.10",
+    "dest_ip": "10.1.3.12",
+    "details": {
+      "process": "/usr/bin/python",
+      "hash": "95483bcdc46d47f18567ac350b0fbb00",
+      "syscall_count": "2091"
+    }
+  },
+  {
+    "id": "c52d6db5-69c3-4cbe-b741-a9a6123878d5",
+    "timestamp": "2025-11-01T06:22:17.369307+00:00",
+    "cluster": "staging-eu-1",
+    "node": "node-7",
+    "namespace": "payments",
+    "pod": "recommender-3162-paym",
+    "container": "sidecar-security",
+    "event": "network beaconing pattern",
+    "severity": 5,
+    "category": "network",
+    "policy": "egress-anomaly",
+    "signals": [
+      "net.conn.freq",
+      "dns.suspicious"
+    ],
+    "user": "sre-bot",
+    "source_ip": "10.1.4.11",
+    "dest_ip": "10.1.2.19",
+    "details": {
+      "process": "/usr/bin/python",
+      "hash": "06a0b827ad7346178598cd4c15b653c4",
+      "syscall_count": "794"
+    }
+  },
+  {
+    "id": "74c10bd0-2342-4358-969e-41c62c8ce7f9",
+    "timestamp": "2025-11-01T06:22:17.369328+00:00",
+    "cluster": "staging-eu-1",
+    "node": "node-4",
+    "namespace": "kube-system",
+    "pod": "api-gateway-0485-kube",
+    "container": "nodejs",
+    "event": "suspicious syscall anomaly",
+    "severity": 6,
+    "category": "syscall",
+    "policy": "syscall-baseline",
+    "signals": [
+      "ebpf.sys.open",
+      "ebpf.sys.execve"
+    ],
+    "user": "alice",
+    "source_ip": "10.1.4.10",
+    "dest_ip": "10.1.4.19",
+    "details": {
+      "process": "/usr/local/bin/miner",
+      "hash": "c164c627d6ad4816bfadd06877d47df3",
+      "syscall_count": "2796"
+    }
+  },
+  {
+    "id": "8cf944be-0c16-4381-abff-ea4b7e745c10",
+    "timestamp": "2025-11-01T06:22:17.369348+00:00",
+    "cluster": "dev-apac-2",
+    "node": "node-6",
+    "namespace": "security",
+    "pod": "threat-detector-4684-secu",
+    "container": "inference",
+    "event": "suspicious syscall anomaly",
+    "severity": 6,
+    "category": "syscall",
+    "policy": "syscall-baseline",
+    "signals": [
+      "ebpf.sys.open",
+      "ebpf.sys.execve"
+    ],
+    "user": "system:serviceaccount:security:agent",
+    "source_ip": "10.1.1.12",
+    "dest_ip": "10.1.1.18",
+    "details": {
+      "process": "/bin/bash",
+      "hash": "46513704a8f542079ad3817d17a775b0",
+      "syscall_count": "1363"
+    }
+  },
+  {
+    "id": "b7a5b00e-cd56-4b42-ad0a-2f936a01738a",
+    "timestamp": "2025-11-01T06:22:17.369386+00:00",
+    "cluster": "dev-apac-2",
+    "node": "node-6",
+    "namespace": "ml-infra",
+    "pod": "payments-5064-mlin",
+    "container": "sidecar-security",
+    "event": "kube-audit: privilege escalation attempt",
+    "severity": 9,
+    "category": "kube-audit",
+    "policy": "rbac-guard",
+    "signals": [
+      "audit.bindClusterRole",
+      "audit.createServiceAccount"
+    ],
+    "user": "ml-app",
+    "source_ip": "10.1.4.19",
+    "dest_ip": "10.1.4.19",
+    "details": {
+      "process": "/usr/local/bin/miner",
+      "hash": "d438945207684cf6ab57237bb2f4b182",
+      "syscall_count": "395"
+    }
+  },
+  {
+    "id": "ec43d7ec-7c2f-4560-b67c-41441c300408",
+    "timestamp": "2025-11-01T06:22:17.369409+00:00",
+    "cluster": "staging-eu-1",
+    "node": "node-4",
+    "namespace": "security",
+    "pod": "feature-store-4658-secu",
+    "container": "inference",
+    "event": "network beaconing pattern",
+    "severity": 4,
+    "category": "network",
+    "policy": "egress-anomaly",
+    "signals": [
+      "net.conn.freq",
+      "dns.suspicious"
+    ],
+    "user": "alice",
+    "source_ip": "10.1.3.15",
+    "dest_ip": "10.1.3.12",
+    "details": {
+      "process": "/usr/bin/kubectl",
+      "hash": "66d37d5ff938492894eff4f922cd4950",
+      "syscall_count": "4873"
+    }
+  },
+  {
+    "id": "ccf77fa1-d549-461c-8920-3b6f59fc678d",
+    "timestamp": "2025-11-01T06:22:17.369446+00:00",
+    "cluster": "dev-apac-2",
+    "node": "node-1",
+    "namespace": "kube-system",
+    "pod": "recommender-1551-kube",
+    "container": "golang",
+    "event": "network beaconing pattern",
+    "severity": 4,
+    "category": "network",
+    "policy": "egress-anomaly",
+    "signals": [
+      "net.conn.freq",
+      "dns.suspicious"
+    ],
+    "user": "ml-app",
+    "source_ip": "10.1.3.11",
+    "dest_ip": "10.1.3.16",
+    "details": {
+      "process": "/bin/bash",
+      "hash": "33e5e6af36a04ec5a283c51c655a870e",
+      "syscall_count": "1613"
+    }
+  },
+  {
+    "id": "aade0744-908f-44bf-95bc-eb028c0d5648",
+    "timestamp": "2025-11-01T06:22:17.369487+00:00",
+    "cluster": "dev-apac-2",
+    "node": "node-3",
+    "namespace": "ml-infra",
+    "pod": "threat-detector-9047-mlin",
+    "container": "inference",
+    "event": "suspicious syscall anomaly",
+    "severity": 8,
+    "category": "syscall",
+    "policy": "syscall-baseline",
+    "signals": [
+      "ebpf.sys.open",
+      "ebpf.sys.execve"
+    ],
+    "user": "system:serviceaccount:security:agent",
+    "source_ip": "10.1.2.17",
+    "dest_ip": "10.1.4.19",
+    "details": {
+      "process": "/usr/bin/kubectl",
+      "hash": "5b183438bfb749ed9320e7198c14af7b",
+      "syscall_count": "3047"
+    }
+  },
+  {
+    "id": "a944586d-5479-465d-b56c-c6db0bbccb85",
+    "timestamp": "2025-11-01T06:22:17.369508+00:00",
+    "cluster": "dev-apac-2",
+    "node": "node-1",
+    "namespace": "security",
+    "pod": "payments-0865-secu",
+    "container": "python-app",
+    "event": "kube-audit: privilege escalation attempt",
+    "severity": 10,
+    "category": "kube-audit",
+    "policy": "rbac-guard",
+    "signals": [
+      "audit.bindClusterRole",
+      "audit.createServiceAccount"
+    ],
+    "user": "ml-app",
+    "source_ip": "10.1.2.18",
+    "dest_ip": "10.1.3.18",
+    "details": {
+      "process": "/bin/bash",
+      "hash": "34cfc32e346f4551a5a7e971ef60be3b",
+      "syscall_count": "2642"
+    }
+  },
+  {
+    "id": "7a0c8481-02d7-404e-8a5f-5123a9847862",
+    "timestamp": "2025-11-01T06:22:17.369529+00:00",
+    "cluster": "prod-west-2",
+    "node": "node-4",
+    "namespace": "payments",
+    "pod": "feature-store-0186-paym",
+    "container": "sidecar-security",
+    "event": "file integrity violation",
+    "severity": 8,
+    "category": "file-integrity",
+    "policy": "fimap",
+    "signals": [
+      "fs.watch.modify",
+      "hash.mismatch"
+    ],
+    "user": "alice",
+    "source_ip": "10.1.2.19",
+    "dest_ip": "10.1.2.12",
+    "details": {
+      "process": "/bin/bash",
+      "hash": "bfe38614dbcf482e939fc5ec68af2421",
+      "syscall_count": "884"
+    }
+  },
+  {
+    "id": "0356a5b9-29f3-4117-ab30-a3567a8367d5",
+    "timestamp": "2025-11-01T06:22:17.369549+00:00",
+    "cluster": "staging-eu-1",
+    "node": "node-1",
+    "namespace": "payments",
+    "pod": "threat-detector-5710-paym",
+    "container": "python-app",
+    "event": "network beaconing pattern",
+    "severity": 6,
+    "category": "network",
+    "policy": "egress-anomaly",
+    "signals": [
+      "net.conn.freq",
+      "dns.suspicious"
+    ],
+    "user": "bob",
+    "source_ip": "10.1.4.14",
+    "dest_ip": "10.1.2.17",
+    "details": {
+      "process": "/usr/local/bin/miner",
+      "hash": "18f2d88662bc41a88adb558f88172f09",
+      "syscall_count": "3650"
+    }
+  },
+  {
+    "id": "56ede81b-afae-4680-93c8-b7aae29487c9",
+    "timestamp": "2025-11-01T06:22:17.369569+00:00",
+    "cluster": "prod-west-2",
+    "node": "node-2",
+    "namespace": "payments",
+    "pod": "api-gateway-1598-paym",
+    "container": "inference",
+    "event": "crypto-mining process detected",
+    "severity": 9,
+    "category": "runtime",
+    "policy": "crypto-mining",
+    "signals": [
+      "ebpf.proc.exec",
+      "cpu.burst"
+    ],
+    "user": "sre-bot",
+    "source_ip": "10.1.3.15",
+    "dest_ip": "10.1.3.11",
+    "details": {
+      "process": "/usr/local/bin/miner",
+      "hash": "c4bb1240f16343b78ea6c21d07cff9ce",
+      "syscall_count": "1955"
+    }
+  },
+  {
+    "id": "41d8257d-3053-4618-9fb6-29e57ce6307c",
+    "timestamp": "2025-11-01T06:22:17.369609+00:00",
+    "cluster": "prod-west-2",
+    "node": "node-4",
+    "namespace": "ml-infra",
+    "pod": "payments-2682-mlin",
+    "container": "golang",
+    "event": "network beaconing pattern",
+    "severity": 6,
+    "category": "network",
+    "policy": "egress-anomaly",
+    "signals": [
+      "net.conn.freq",
+      "dns.suspicious"
+    ],
+    "user": "system:serviceaccount:security:agent",
+    "source_ip": "10.1.4.11",
+    "dest_ip": "10.1.4.18",
+    "details": {
+      "process": "/usr/bin/kubectl",
+      "hash": "8dee12471bbe47478f9978bf0e32d147",
+      "syscall_count": "134"
+    }
+  },
+  {
+    "id": "e963781c-4030-4b65-aef6-b27796874476",
+    "timestamp": "2025-11-01T06:22:17.369629+00:00",
+    "cluster": "prod-east-1",
+    "node": "node-4",
+    "namespace": "kube-system",
+    "pod": "payments-8170-kube",
+    "container": "golang",
+    "event": "kube-audit: privilege escalation attempt",
+    "severity": 8,
+    "category": "kube-audit",
+    "policy": "rbac-guard",
+    "signals": [
+      "audit.bindClusterRole",
+      "audit.createServiceAccount"
+    ],
+    "user": "sre-bot",
+    "source_ip": "10.1.4.19",
+    "dest_ip": "10.1.2.16",
+    "details": {
+      "process": "/bin/bash",
+      "hash": "9af42a2d1bba4b0587d8d437b64ce94c",
+      "syscall_count": "2358"
+    }
+  },
+  {
+    "id": "4b1d09ec-d827-48f3-bd44-092b673617b2",
+    "timestamp": "2025-11-01T06:22:17.369648+00:00",
+    "cluster": "dev-apac-2",
+    "node": "node-4",
+    "namespace": "ml-infra",
+    "pod": "recommender-3787-mlin",
+    "container": "python-app",
+    "event": "file integrity violation",
+    "severity": 8,
+    "category": "file-integrity",
+    "policy": "fimap",
+    "signals": [
+      "fs.watch.modify",
+      "hash.mismatch"
+    ],
+    "user": "ml-app",
+    "source_ip": "10.1.3.10",
+    "dest_ip": "10.1.1.10",
+    "details": {
+      "process": "/bin/bash",
+      "hash": "872b2713883446599bbb70e1fa98f939",
+      "syscall_count": "1521"
+    }
+  }
+]
