@@ -1,0 +1,22 @@
+prod:
+  uptime_sla: "99.999%"
+  regions:
+    - us-east
+    - eu-west
+  features:
+    predictive_patching: true
+    zero_trust: true
+gov:
+  uptime_sla: "99.999%"
+  regions:
+    - gov-west
+  features:
+    predictive_patching: true
+    zero_trust: true
+edge:
+  uptime_sla: "99.9%"
+  regions:
+    - apac-edge
+  features:
+    predictive_patching: false
+    zero_trust: true

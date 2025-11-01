@@ -1,23 +1,23 @@
-"""Agent package for AICP multi-agent demo."""
+"""Agent package exposing security orchestration utilities."""
+
+from .base import AgentMessage, AgentRegistry, SecurityAgent
+from .security_agents import (
+    ForensicCollectorAgent,
+    IncidentCommanderAgent,
+    PolicyValidatorAgent,
+    ThreatHunterAgent,
+    ThreatIntelAgent,
+    build_agent_registry,
+)
 
 __all__ = [
-    "PlannerAgent",
-    "BrandAgent",
-    "VisionAgent",
-    "PreferenceAgent",
-    "FulfillmentAgent",
-    "AgenticRetailAssistant",
-    "SmartInventoryAI",
-    "SupportCopilot",
-    "MultiAgentCommercePlanner",
+    "AgentMessage",
+    "AgentRegistry",
+    "SecurityAgent",
+    "ThreatHunterAgent",
+    "ForensicCollectorAgent",
+    "PolicyValidatorAgent",
+    "ThreatIntelAgent",
+    "IncidentCommanderAgent",
+    "build_agent_registry",
 ]
-
-from .planner import PlannerAgent
-from .brand import BrandAgent
-from .vision import VisionAgent
-from .preference import PreferenceAgent
-from .fulfillment import FulfillmentAgent
-from .agentic_retail import AgenticRetailAssistant
-from .inventory import SmartInventoryAI
-from .support import SupportCopilot
-from .commerce_planner import MultiAgentCommercePlanner

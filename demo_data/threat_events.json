@@ -1,0 +1,4 @@
+[
+  {"id": "evt-001", "severity": "high", "source": "k8s", "description": "Pod escape attempt"},
+  {"id": "evt-002", "severity": "medium", "source": "endpoint", "description": "Suspicious process injection"}
+]
