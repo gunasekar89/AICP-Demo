@@ -1,0 +1,49 @@
+version: '3.9'
+services:
+  frontend:
+    build:
+      context: ./frontend
+    command: npm run dev
+    volumes:
+      - ./frontend:/app
+    ports:
+      - '3000:3000'
+
+  backend:
+    build:
+      context: ./backend
+    command: uvicorn backend.api.main:app --host 0.0.0.0 --port 8000
+    volumes:
+      - ./backend:/app
+    ports:
+      - '8000:8000'
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/deepseek
+
+  worker:
+    build:
+      context: ./backend
+    command: celery -A backend.services.tasks.celery_app worker --loglevel=info
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7
+    ports:
+      - '6379:6379'
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: deepseek
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
